@@ -1,0 +1,260 @@
+What is Statistics?
+Statistics is the science of collecting, organizing, analyzing, interpreting, and presenting data. It encompasses a wide range 
+of techniques for summarizing data, making inferences, and drawing conclusions.
+
+Statistical methods help quantify uncertainty and variability in data, allowing researchers and analysts to make data-driven 
+decisions with confidence.
+
+Applications of Statistics in Machine Learning:
+Statistics is a key component of machine learning, with broad applicability in various fields.
+
+Feature engineering relies heavily on statistics to convert geometric features into meaningful predictors for machine learning algorithms.4
+
+In image processing tasks like object recognition and segmentation, statistics accurately reflect the shape and structure of objects in images.
+
+Anomaly detection and quality control benefit from statistics by identifying deviations from norms, aiding in the detection of defects in 
+manufacturing processes.
+
+Environmental observation and geospatial mapping leverage statistical analysis to monitor land cover patterns and ecological trends 
+effectively.
+
+Overall, statistics plays a crucial role in machine learning, driving insights and advancements across diverse industries and applications.
+
+Types of Statistics
+
+There are commonly two types of statistics, which are discussed below:
+
+Descriptive Statistics: 
+"De­scriptive Statistics" helps us simplify and organize big chunks of data. This makes large amounts of data easier to understand.
+
+Inferential Statistics: 
+"Inferential Statistics" is a little different. It uses smaller data to draw conclusions about a larger group. It helps us predict 
+and draw conclusions about a population.
+
+
+DESCRIPTIVE STATISTICS : summarize and describes the features of a dataset, providing a foundation for further statistical analysis.
+
+MEAN   : the avg by summing all the values in a given dataset.
+MEDIAN : the central value in a dataset.
+MODE   : the most frequent repeating value in a dataset. 
+
+
+Methods of dispersion (Descriptive Statistics) :
+
+Measures of dispersion are statistical tools used to quantify the spread or variability in a dataset.These can be broadly classified into 
+absolute measures and relative measures. in simple worlds is the way of measuring how far the data points in a data is spread around 
+the central values like the mean or median.
+
+Range: The difference between the maximum and minimum values.
+
+Variance : the mean(average) of the squared difference of the  datapoints in the data and by putting root to this we can get the standard deviation (average distance).
+
+steps to calulate the Variance:
+1.calulate the mean 
+2.subtract the data points form the mean 
+3.square the results to convert the negative values into positive values
+4.again calulate the mean we will get the Variance
+5.by putting root on the Variance we can get the standard deviation
+
+standard deviation : the average distance of the orginal units from the mean 
+
+use the above steps to find the standard deviation
+
+Quartiles:
+Quartiles divide a data set into four equal parts, helping to understand the distribution of the data. 
+They are important for identifying the spread and skewness of the data.
+
+There are three quartiles:
+
+First Quartile (Q1) or Lower Quartile:
+This is the median of the lower half of the data (excluding the median if the number of data points is odd). It separates the lowest 25% of the data.
+
+Second Quartile (Q2) or Median:
+This is the middle value of the data set, dividing the data into two halves. It separates the lower 50% from the upper 50%.
+
+Third Quartile (Q3) or Upper Quartile:
+This is the median of the upper half of the data, separating the lowest 75% from the highest 25%.
+
+Interquartile Range (IQR):
+The Interquartile Range (IQR) is the difference between the third quartile (Q3) and the first quartile (Q1). 
+It represents the range within which the middle 50% of the data lies.
+IQR=Q3−Q1
+
+1. Covariance:
+Covariance measures how two variables change together.
+-> If both variables increase or decrease together, covariance is positive.
+-> If one variable increases while the other decreases, covariance is negative.
+-> If there’s no relationship, covariance is close to 0.
+
+Imagine you track the number of hours studied and the marks scored by students.
+As study hours increase, marks also increase, so covariance will be positive.
+
+ Correlation:
+Correlation is a standardized version of covariance.
+It measures how strong the relationship is between two variables and is always between -1 and +1:
+
++1: Perfect positive relationship.
+
+0: No relationship.
+
+−1: Perfect negative relationship.
+
+Difference Between Covariance and Correlation:
+Covariance tells direction (positive or negative) but not how strong the relationship is.
+Correlation tells both the strength and direction of the relationship.
+
+Probability Theory:
+it forms the backbone of statistical inference, aiding in quantifying uncertainty and making predictions based on data.
+
+Basic Concepts
+Random Variables: Variables with random outcomes.
+Probability Distributions: Describe the likelihood of different outcomes.
+
+
+BINOMIAL DISTRIBUTION :
+Binomial Distribution is a Discrete Distribution.
+It describes the outcome of binary scenarios, e.g. toss of a coin, it will either be head or tails.
+
+It has three parameters:
+n - number of trials.
+p - probability of occurence of each trial (e.g. for toss of a coin 0.5 each).
+size - The shape of the returned array.
+and seed()  is the parameters which is used to generate the same random number consitently
+
+NORMAL DISTRIBUTION :
+normal distribution is mainly used for the visualization of the mean and SD of a data 
+to get a particular value in the NORMAL distribution we use the 
+STANDARD NORMAL DEVIATION METHOD 
+I.E : Z = X - MEAN / SD
+then the Z value is been analysed using the Z-table and we will get the percentage of the particular value 
+
+POSSION DISTRIBUTION :
+Poisson Distribution is one of the types of discrete probability distributions like binomial distribution in probability. 
+It expresses the probability of a given number of events occurring in a fixed interval of time.
+
+Poisson distribution is a type of discrete probability distribution that determines the likelihood of an event occurring 
+a specific number of times (k) within a designated time or space interval. This distribution is characterized by a 
+single parameter, λ (lambda), representing the average number of occurrences of the event.
+
+Central Limit Theorem (CLT) :
+The Central Limit Theorem says that if you take lots of random samples from a group (population) and calculate 
+the average (mean) for each sample
+
+Those averages will start to look like a normal curve (a bell shape), no matter what the original group looks like.
+This works if your samples are big enough (usually 30 or more).
+
+Why It’s Cool:
+Even if your group (population) looks weird (like lopsided or random), the averages from lots of samples will act normal! 
+This makes it easier to do calculations and make predictions.
+
+Example: Candy in Packets 
+Imagine you’re checking the number of candies in packets from a factory.
+The factory says packets should have 15 candies on average, but the number of candies in each packet varies a lot.
+
+Step 1: Original Population
+The total candies in all packets (population) are not distributed evenly:
+
+Some packets have 10 candies, others have 20 candies, etc.
+This makes the population look random and messy.
+
+Step 2: Take Samples
+Now, you start taking random samples:
+Pick 5 packets, count the candies, and find the average number of candies in those 5 packets.
+Repeat this process many times.
+Here’s what you might get:
+
+Sample 1: Packets = [12, 15, 14, 16, 18], Average = 15.
+Sample 2: Packets = [10, 11, 17, 19, 15], Average = 14.4.
+Sample 3: Packets = [13, 15, 15, 16, 20], Average = 15.8.
+
+Step 3: Distribution of Sample Means
+Plot all the sample averages (e.g., 15, 14.4, 15.8, etc.).
+At first, it might still look random.
+But as you take more and more samples, the averages will start forming a bell-shaped curve (normal distribution).
+
+Why This Happens:
+Each sample smooths out the randomness: Big numbers and small numbers balance each other.
+Larger samples are more stable: The more packets in each sample, the more reliable the average becomes.
+
+Summary of Results:
+Even though the number of candies in individual packets is random, the sample averages start to look normal.
+This helps you predict things like:
+"What’s the most likely average number of candies in a random set of packets?"
+Use the normal curve to calculate probabilities.
+
+Inferential Statistics :
+Inferential statistics involve making predictions or inferences about a population based on a sample of data.
+
+Population and Sample :
+Population: The entire group being studied.
+Sample: A subset of the population used for analysis.
+
+Point Estimation:
+Imagine you’re trying to guess the average height of all students in a school.
+You measure a few students (sample) and calculate their average height.
+If the average height of your sample is 170 cm, this single value is your point estimate for the population's average height.
+
+Interval Estimation:
+Instead of giving just one number (like 170 cm), you say:
+“I’m pretty sure the true average height of all students is between 165 cm and 175 cm.”
+This range is called a confidence interval, and it gives a better idea of where the true value might lie.
+
+Confidence Interval (Simple Explanation)
+A confidence interval (CI) tells us how sure we are about a range of values containing the true value.
+If you say, "I am 95% confident that the average height is between 165 cm and 175 cm," it means that if you repeated this
+process many times, 95% of those intervals would contain the true average.
+
+HYPOTHESES :
+What is a Hypothesis?
+A hypothesis is simply an educated guess or assumption about something.
+
+Example: "Most students prefer studying at night."
+In statistics, a hypothesis is a statement about a population parameter (like a mean or proportion) that you want to test using data.
+
+What is Hypothesis Testing (in Simple Words)?
+Hypothesis Testing is a way to check whether your guess (hypothesis) is likely true or not, based on sample data.
+It’s like a court trial where you evaluate evidence (data) to decide if a claim is valid.
+
+Steps of Hypothesis Testing (Simplified)
+Set Up Two Hypotheses:
+
+Null Hypothesis (𝐻0): 
+The "no change" or "no effect" assumption.
+Example: "Students do not prefer studying at night."
+
+Alternative Hypothesis (𝐻𝑎): 
+The opposite of the null, stating there is a change or effect.
+Example: "Students do prefer studying at night."
+
+ANOVA :
+ANOVA stands for Analysis of Variance. It’s a statistical method used to compare the means of three or more groups 
+to see if there’s a significant difference between them.
+
+When to Use ANOVA?
+You have three or more groups to compare.
+Example: You want to see if students in different schools (School A, B, and C) have the same average test scores.
+
+CHI-SQUARE TEST :
+The Chi-Square Test is a statistical method used to determine if there’s a significant relationship between 
+two categorical variables, or if the observed data matches what we expect.
+
+It answers questions like:
+"Is there a connection between gender and preference for a certain product?"
+"Do the observed outcomes match our expected outcomes?"
+
+Types of Chi-Square Tests
+
+Chi-Square Test for Independence:
+Tests if two categorical variables are related.
+Example: Is there a relationship between age group and movie preference?
+
+Chi-Square Goodness-of-Fit Test:
+Tests if the observed data matches the expected data.
+Example: Do the colors of candies in a bag match the company’s claim (e.g., 50% red, 30% green, 20% yellow)?
+
+BAYES THEOREM :
+Bayes' Theorem helps us update what we believe about something based on new information. It's a way to find out the likelihood 
+of an event happening, given that another event has already occurred.
+
+P(A∣B)= P(B∣A)⋅P(A) / P(B)
+​

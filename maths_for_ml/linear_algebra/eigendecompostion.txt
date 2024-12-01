@@ -1,0 +1,278 @@
+Notes on Eigenvalues and Eigenvectors
+What Are Eigenvalues and Eigenvectors?
+Eigenvectors are special vectors that remain in the same direction when a linear transformation (represented by a matrix) is applied. The transformation may stretch or shrink the eigenvector but does not change its direction.
+Eigenvalues are the corresponding scalar factors that tell you how much the eigenvector is stretched or compressed during the matrix transformation.
+Mathematical Definition
+Given a matrix 
+𝐴
+A, an eigenvector 
+𝑣
+v and an eigenvalue 
+𝜆
+λ satisfy the equation:
+
+A * v = λ * v
+
+Where:
+
+𝐴
+A is the matrix,
+𝑣
+v is the eigenvector,
+𝜆
+λ is the eigenvalue.
+This means that when you multiply the matrix 
+𝐴
+A by the eigenvector 
+𝑣
+v, you get a scalar multiple of that eigenvector, where the scalar is the eigenvalue 
+𝜆
+λ.
+
+Eigenvalues and Eigenvectors in Practice
+Eigenvector: The direction of the vector remains unchanged when multiplied by the matrix.
+Eigenvalue: The factor by which the eigenvector is stretched (or compressed) when the matrix is applied.
+Example: 2x2 Matrix
+Consider the matrix 
+𝐴
+A:
+
+A = [ 6, 2 ] [ 2, 3 ]
+
+We can calculate the eigenvalues and eigenvectors for this matrix.
+
+Finding Eigenvalues:
+To find the eigenvalues 
+𝜆
+λ, we solve the characteristic equation:
+
+det(A - λ * I) = 0
+
+Where:
+
+𝐼
+I is the identity matrix,
+𝜆
+λ is the eigenvalue.
+For the matrix 
+𝐴
+A:
+
+[ 6, 2 ] - λ * [ 1, 0 ] = [ 6-λ, 2 ] [ 2, 3 ] [ 2, 3-λ ]
+
+Now, calculate the determinant of this matrix:
+
+det([ 6-λ, 2 ] [ 2, 3-λ ]) = (6 - λ)(3 - λ) - 2 * 2 = 0
+
+Expanding this:
+
+(6 - λ)(3 - λ) - 4 = 0
+
+18 - 9λ - 3λ + λ² - 4 = 0
+
+λ² - 12λ + 14 = 0
+
+Solving this quadratic equation for 
+𝜆
+λ, we get the eigenvalues:
+
+λ₁ = 7, λ₂ = 2
+
+Finding Eigenvectors:
+For each eigenvalue 
+𝜆
+λ, substitute it into the equation 
+(
+𝐴
+−
+𝜆
+∗
+𝐼
+)
+∗
+𝑣
+=
+0
+(A−λ∗I)∗v=0 to find the eigenvectors.
+
+For 
+𝜆
+1
+=
+7
+λ 
+1
+​
+ =7:
+Substitute 
+𝜆
+=
+7
+λ=7 into 
+(
+𝐴
+−
+𝜆
+∗
+𝐼
+)
+(A−λ∗I):
+
+[ 6 - 7, 2 ] = [ -1, 2 ] [ 2, 3 - 7 ] [ 2, -4 ]
+
+Now, solve [ -1, 2 ] * v = 0. The solution gives us the eigenvector:
+
+v₁ = [ 2, 1 ]
+
+For 
+𝜆
+2
+=
+2
+λ 
+2
+​
+ =2:
+Substitute 
+𝜆
+=
+2
+λ=2 into 
+(
+𝐴
+−
+𝜆
+∗
+𝐼
+)
+(A−λ∗I):
+
+[ 6 - 2, 2 ] = [ 4, 2 ] [ 2, 3 - 2 ] [ 2, 1 ]
+
+Solve [ 4, 2 ] * v = 0, and the eigenvector is:
+
+v₂ = [ -1, 2 ]
+
+Final Results:
+Eigenvalues: 
+𝜆
+1
+=
+7
+λ 
+1
+​
+ =7, 
+𝜆
+2
+=
+2
+λ 
+2
+​
+ =2
+Eigenvectors:
+For 
+𝜆
+1
+=
+7
+λ 
+1
+​
+ =7, the eigenvector is 
+𝑣
+1
+=
+[
+2
+,
+1
+]
+v 
+1
+​
+ =[2,1].
+For 
+𝜆
+2
+=
+2
+λ 
+2
+​
+ =2, the eigenvector is 
+𝑣
+2
+=
+[
+−
+1
+,
+2
+]
+v 
+2
+​
+ =[−1,2].
+Interpretation:
+The eigenvectors are the directions that the matrix will act on without rotating them. They represent the "stable" directions under the matrix transformation.
+The eigenvalues tell you how much the matrix will stretch or compress the eigenvectors:
+Eigenvalue 
+𝜆
+1
+=
+7
+λ 
+1
+​
+ =7: The first eigenvector 
+𝑣
+1
+v 
+1
+​
+  is stretched by a factor of 7.
+Eigenvalue 
+𝜆
+2
+=
+2
+λ 
+2
+​
+ =2: The second eigenvector 
+𝑣
+2
+v 
+2
+​
+  is stretched by a factor of 2.
+Summary:
+Eigenvectors represent the directions that remain unchanged in terms of direction (but can be stretched/compressed) under the transformation.
+Eigenvalues represent how much the eigenvectors are stretched or compressed.
+In the example above:
+
+The matrix stretches vectors along the direction of 
+𝑣
+1
+v 
+1
+​
+  by a factor of 7.
+It stretches vectors along the direction of 
+𝑣
+2
+v 
+2
+​
+  by a factor of 2.
+These concepts are widely used in machine learning, computer vision, and data science, particularly in areas like Principal Component Analysis (PCA), dimensionality reduction, and data transformation.
+
+
+
+
+
+
+
+

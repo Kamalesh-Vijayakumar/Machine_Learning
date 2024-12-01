@@ -1,0 +1,173 @@
+LINEAR_ALGEBRA 
+
+TOPICS :
+
+Linear Transformations
+Matrix Operations
+Eigenvalues and Eigenvectors
+Solving Linear Systems
+Applications of Linear Algebra in Machine Learning
+
+
+A.Definition of Linear Algebra:
+Linear algebra is the branch of mathem0atics that deals with vector spaces and linear mappings between these spaces. 
+It encompasses the study of vectors, matrices, linear equations, and their properties.
+
+B.FUNDAMENATL CONCEPTS :
+1.vectors:
+Vectors are quantities that have both magnitude and direction, often represented as arrows in space.
+
+2.matrices:
+Matrices are rectangular arrays of numbers, arranged in rows and columns.
+Matrices are used to represent linear transformations, systems of linear equations, and data transformations in machine learning.
+
+3.Scalars:
+Scalars are single numerical values, without direction, magnitude only.
+Scalars are used to scale vectors or matrices through operations like multiplication.
+
+C. Operations in Linear Algebra
+1. Addition and Subtraction
+Addition and subtraction of vectors or matrices involve adding or subtracting corresponding elements.
+
+2. Scalar Multiplication
+Scalar multiplication involves multiplying each element of a vector or matrix by a scalar.
+
+3. Dot Product (Vector Multiplication)
+The dot product of two vectors measures the similarity of their directions.
+It is computed by multiplying corresponding elements of two vectors and summing the results.
+
+4. Cross Product (Vector Multiplication)
+The cross product of two vectors in three-dimensional space produces a vector orthogonal to the plane containing the original vectors.
+It is used less frequently in machine learning compared to the dot product.
+
+
+
+Linear Transformations
+
+Linear transformations are fundamental operations in linear algebra that involve the transformation of vectors and matrices 
+while preserving certain properties such as linearity and proportionality. In the context of machine learning, 
+linear transformations play a crucial role in data preprocessing, feature engineering, and model training. 
+
+common Linear Transformations in Machine Learning
+
+1.Translation:
+Translation involves shifting the position of vectors without changing their orientation or magnitude.
+In machine learning, translation is commonly used for data normalization and centering, 
+where the mean of the data is subtracted from each data point.
+
+2.Scaling:
+Scaling involves stretching or compressing vectors along each dimension.
+Scaling is frequently applied in feature scaling, where features are scaled to have similar ranges to prevent 
+dominance of certain features in machine learning models.
+
+3.Rotation:
+Rotation involves rotating vectors around an axis or point in space.
+While less common in basic machine learning algorithms, rotation can be useful in advanced applications such as 
+computer vision and robotics.
+
+Matrix operations :
+
+A.Matrix multiplication :
+Matrix Multiplication is a fundamental operation in linear algebra, involving the multiplication of two matrices 
+to produce a new matrix. The resulting matrix’s dimensions are determined by the number of rows in the first matrix 
+and the number of columns in the second matrix.
+
+B.Transpose and Inverse of matrix 
+
+1.Transpose Matrix -> flipping the rows and columns of a matrix 
+2.Inverse Matrix   -> its a way of making the matrix elements to simplify , first teh determenent is calculated than that determenent is been multiplyed to that matrix 
+
+
+EIGEN VALUES AND EIGEN VECTORS :
+
+Eigenvalue λ: 
+This tells you by how much the eigenvector is stretched or compressed when the matrix transformation is applied.
+
+Eigenvector 𝑣: 
+This is the vector that only gets scaled (not rotated or skewed) when the matrix transformation is applied. It represents a direction in the space that 
+remains invariant (unchanged in direction) after the transformation.
+
+If the eigenvalue is greater than 1, the matrix stretches the eigenvector.
+If the eigenvalue is between 0 and 1, the matrix compresses the eigenvector.
+If the eigenvalue is negative, the matrix stretches the eigenvector but also reverses its direction.
+
+EIGEN DECPOSITION :
+the operation of both eigen values and eigen vectors is called eigen decompositon 
+
+
+SOLVING LINEAR SYSTEMS 
+
+Linear systems of equations arise frequently in machine learning tasks, such as parameter estimation,
+model fitting, and optimization. In this section, we explore methods for solving linear systems, 
+including Gaussian elimination, LU decomposition, and QR decomposition, along with 
+their significance and applications.
+
+Gaussian elimination :
+
+Gaussian Elimination is a step-by-step method for solving systems of linear equations. 
+It transforms the equations into a simpler form so you can easily find the solution. 
+The goal is to make the system look like a staircase (called row echelon form) and 
+then solve it using substitution.
+
+LU Decomposition :
+
+LU decomposition is mainly relies on  solving the linear matrix where a matrix is divided as two parts 
+as L and U and these matrix decomposition techinuque is used in future if another similiar matrix is appeared.
+
+LU decomposition is a way of breaking a matrix into two simpler matrices:
+L (Lower triangular matrix): Contains values below the diagonal.
+U (Upper triangular matrix): Contains values on and above the diagonal.
+This makes solving systems of linear equations easier, especially when you need 
+to solve the same system multiple times with different right-hand sides. 
+Instead of solving the system directly in multiple times.
+
+QR decomposition :
+
+QR Decomposition (or QR Factorization) is a method used to decompose a matrix into two matrices: Q and R.
+Q is an orthogonal matrix (or unitary if the matrix is complex), meaning that its columns are orthonormal 
+(they are at right angles to each other, and each column has unit length).
+R is an upper triangular matrix, which means all the elements below the 
+main diagonal are zero.
+
+ADDED TOPICS :
+
+1.Norms and Distances: 
+
+1.L1 Norm (Manhattan Norm): The L1 norm is the sum of the absolute values of the vector's components. 
+It's like measuring the total distance traveled if you move along the axes in a grid-like manner 
+(similar to walking along streets in a city, hence the "Manhattan" name).
+
+import numpy as np
+# Define the vector
+v = np.array([3, -4])
+# L1 Norm (Manhattan Norm)
+l1_norm = np.sum(np.abs(v))
+print(f"L1 Norm: {l1_norm}")
+
+2.L2 Norm (Euclidean Norm):
+The L2 norm is the most common way to measure the length of a vector. It's calculated as the square root 
+of the sum of the squares of the vector's components. This is like measuring the straight-line distance 
+from the origin to the point.
+
+#L2 Norm (Euclidean Norm)
+l2_norm = np.linalg.norm(v)  # or np.sqrt(np.sum(v**2))
+print(f"L2 Norm: {l2_norm}")
+
+
+3.L∞ Norm (Max Norm):
+The L∞ norm is the maximum absolute value of the components of the vector. It tells you the largest "stretch" in any direction.
+# L∞ Norm (Max Norm)
+l_inf_norm = np.max(np.abs(v))
+print(f"L∞ Norm: {l_inf_norm}")
+
+
+
+
+Rank of a Matrix:
+
+The rank of a matrix indicates the number of linearly independent rows or columns.
+It's critical for understanding solutions to linear systems and for concepts like dimensionality reduction.
+Singular Value Decomposition (SVD)
+Principal component analysis (PCA)
+
+

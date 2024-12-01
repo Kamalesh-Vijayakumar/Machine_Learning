@@ -1,0 +1,93 @@
+numpy
+
+np.array([])
+
+np.shape()
+
+np.arr_name.ndim
+
+np.array([],ndimn= value)
+
+for i in np.nditer(array_name) -- to iterate the value directly 
+
+for x in np.nditer(arr, flags=['buffered'], op_dtypes=['S']): -- buffered used for temp storage and 'S' is the type conversion 
+
+for idx, x in np.ndenumerate(arr):
+
+concatinate
+
+axis 
+
+stack //hstack //vstack //dstack
+
+np.array_split(arr_name,dimension)
+
+hsplit
+
+x = np.where(arr == 4) //returns index 
+
+x = np.searchsorted(arr, 7) also returns index 
+
+x = np.searchsorted(arr, 7, side='right') //to search from right side 
+
+-----PROGRAM-----
+
+from numpy import random 
+
+x = random.randint(100)
+print(x) //returns the random number from 0 to 100
+
+x=random.rand(1) //returns the random float number from 0 to 1
+
+x = random.randint(100,size=6) //returns the array with a size of 6 
+
+x = random.choice([3, 5, 7, 9]) // returns a random number only from the given array 
+
+random.shuffle(arr)
+
+random.permutation(arr)
+
+x = random.normal(size=(2, 3)) //to use the normal  or guassian distribution 
+
+normal distribution is mainly used for the visualization of the mean and SD of a data 
+to get a particular value in the NORMAL distribution we use the 
+STANDARD NORMAL DEVIATION METHOD 
+I.E : Z = X - MEAN / SD
+then the Z value is been analysed using the Z-table and we will get the percentage of the particular value 
+
+in NUMPY the parameters for the SD DEVIATION is 
+loc   => MEAN
+Scale => SD
+SIZE  => Shape of the returned array
+
+x = random.normal(loc=1, scale=2, size=(2, 3))
+
+BINOMIAL DISTRIBUTION 
+
+Binomial Distribution is a Discrete Distribution.
+It describes the outcome of binary scenarios, e.g. toss of a coin, it will either be head or tails.
+It has three parameters:
+
+n - number of trials.
+
+p - probability of occurence of each trial (e.g. for toss of a coin 0.5 each).
+
+size - The shape of the returned array.
+
+and seed()  is the parameters which is used to generate the same random number consitently
+
+----- CODE ----
+
+from numpy import random
+x = random.binomial(n=10, p=0.5, size=10)
+print(x)
+
+
+Visualization of Binomial Distribution
+
+from numpy import random
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.distplot(random.binomial(n=10, p=0.5, size=1000), hist=True, kde=False)
+plt.show()
+

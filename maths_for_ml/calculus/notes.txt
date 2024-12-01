@@ -1,0 +1,137 @@
+WHAT IS CALCULUS :
+
+In mathematics, Calculus deals with continuous change. It is also called infinitesimal calculus or “the calculus of infinitesimals”. 
+The Two major concepts of calculus are Derivatives and Integrals.
+
+The derivative gives us the rate of change of a function. It describes the function at a particular point while the integral gives us the area under the curve.
+The integral gives us the area under the curve. Integral gathers the different values of a function over a number of values.
+In general, classical calculus Calculus is the study of the continuous change of functions
+
+
+Calculus is a fundamental tool in machine learning, particularly in the development of algorithms and models. 
+It provides the mathematical framework for understanding how machines learn and optimize their performance. 
+Calculus is used to describe the progress of machine learning, allowing practitioners to analyze and 
+improve the learning process.
+
+
+There are two main branches of calculus:
+
+Differential Calculus: Focuses on rates of change and slopes of curves. "cuts something into small pieces to find how it changes."
+Integral Calculus: Deals with accumulation, like areas under curves. "joins (integrates) the small pieces together to find how much there is."
+
+but mostly  the Differential Calculus are used in the ml more than the integral calculus :
+Differential calculus focuses on the concept of derivatives, which deal with the rate of change of a function. 
+It helps us understand how things change, like how fast a car is moving at any point in time,
+how the value of a function increases or decreases, or how quantities are related to one another.
+
+
+
+1.Derivatives :
+Differentiation is the process of finding the derivative of a function, which measures how the function's output changes 
+with respect to changes in its input. In machine learning, differentiation is used to:
+
+Calculate gradients in gradient descent algorithms.
+Optimize cost functions.
+Understand the sensitivity of model predictions to input changes.
+
+For instance, in gradient descent, the derivative of the cost function with respect to the model parameters is used to update 
+the parameters iteratively to minimize the cost function.
+
+2.Partial Derivatives :
+Partial Derivatives extend the concept of differentiation to functions of multiple variables. They measure how the function 
+changes as one of the input variables changes, keeping the others constant. 
+
+Partial derivatives are crucial in:
+Multivariable optimization problems.
+Training models with multiple parameters, such as neural networks.
+
+In neural networks, partial derivatives are used in the backpropagation algorithm to compute the gradient of the loss function 
+with respect to each weight.
+
+
+3. Gradient and Gradient Descent
+The gradient is a vector of partial derivatives and points in the direction of the steepest ascent of a function. 
+Gradient descent is an optimization algorithm that uses the gradient to find the minimum of a function. 
+
+Gradient:
+The Jacobian is particularly useful in understanding how small changes in input variables affect the output vector, 
+which is crucial for multivariate optimization.
+
+Gradient Descent:
+Gradient Descent is an optimization technique used to minimize the error or loss function in machine learning, particularly in
+training models like neural networks.
+
+Goal: The goal of gradient descent is to find the minimum point of a function. In the context of machine learning, 
+this function is typically the loss function, which tells us how far off our model’s predictions are from the 
+actual values. Minimizing this loss helps our model improve.
+
+DESENT : The term descent refers to moving downhill or going in the direction where the function decreases 
+(i.e., the loss function gets smaller). This is why it's called "gradient descent" — you are 
+descending (or moving downward) on the curve of the loss function by following the gradient.
+
+It is widely used in:
+
+Training neural networks.
+Linear and logistic regression.
+Support vector machines.
+
+The gradient descent algorithm iteratively adjusts the model parameters in the opposite direction of the gradient to 
+minimize the cost function.
+
+4. Chain Rule
+The chain rule is a formula for computing the derivative of a composite function. It is essential in backpropagation, where the derivative
+of the loss function with respect to each weight is computed by chaining together the derivatives of each layer in the network. 
+This allows for efficient computation of gradients in deep learning models.
+
+5. Jacobian and Hessian Matrices
+The Jacobian matrix contains all first-order partial derivatives of a vector-valued function, while the 
+Hessian matrix contains all second-order partial derivatives. These matrices are used in:
+
+The Jacobian is particularly useful in understanding how small changes in input variables affect the output vector, 
+which is crucial for multivariate optimization.
+
+The Jacobian matrix is a tool that shows how a system's outputs are affected by small changes in its inputs. It is useful for 
+understanding and optimizing multi-variable functions, particularly in machine learning and deep learning models.
+
+Analyzing the curvature of cost functions.
+Implementing advanced optimization techniques like Newton's method.
+
+Terms in calculus
+
+1.function - 
+A function is a relation between inputs and outputs, where each input has exactly one output.
+
+2.Limit - 
+A limit describes the value that a function approaches as the input gets closer to some number.
+
+3.countinuity - 
+A function is continuous if there are no jumps, breaks, or holes in its graph.
+
+4.slope - 
+The slope of a function at any point is the rate at which the function is changing at that point.
+
+5.tangent line - 
+The tangent line to a curve at a given point is the straight line that touches the curve at that point without crossing it.
+
+6.higher-order Derivatives - 
+The second derivative is the derivative of the derivative and shows how the rate of change itself is changing (the curvature of the graph).
+
+7.integral - 
+An integral is the reverse process of differentiation and can be thought of as measuring the area under a curve.
+
+8.critical points - 
+Critical points occur where the derivative is either zero or undefined. These points can tell us where a function has maximum or minimum values.
+
+9.concavity - 
+Concave up means the graph opens upwards like a bowl, and the second derivative is positive.
+Concave down means the graph opens downwards like a hill, and the second derivative is negative.
+
+10.Mean value Theroem -
+This theorem states that for any smooth curve between two points, there's at least one point where the instantaneous rate of change 
+(the derivative) equals the average rate of change over the interval.
+
+11.Infinite and definite Integrals - 
+Indefinite Integral gives a family of functions and includes a constant of integration 
+Definite Integral calculates the exact area under a curve between two points, giving a numeric result.
+
+
