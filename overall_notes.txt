@@ -1,0 +1,235 @@
+SYLLABUS
+
+Week 1: Basics of Linear Algebra, Probability, Optimization
+
+Week 2: Introduction to Supervised Learning - Regression; Topics - Linear Regression; Ridge Regression; LASSO
+
+Week 3: Supervised Learning - Classification; Topics: K-NN, Decision Tree.
+
+Week 4: Supervised Learning - Classification; Topics: Naive Bayes.
+
+Week 5: Supervised Learning - Logistic Regression ,Perceptron.
+
+Week 6: Supervised Learning - Support Vector Machines
+
+Week 7: Supervised Learning - Ensemble Methods
+
+Week 8: Unsupervised Learning - K-means Clustering, PCA
+
+
+
+
+----------SUPERVISIED LEARNING----------
+
+
+a raw datset  should be divided as 
+
+FEATURES/LABELS 
+
+FEATURES -> the characteristics for example in mango (colour and weight) 
+LABELS -> Supervision for example in mango (lable = ripe or raw)
+this two plays a major role in the Supervisied learning 
+
+
+ALGOTITHM -> VALIMURAI in tamil 
+can be defined as LEARNING ALGOTITHM
+
+algorithm input -> is called as Training set -> the Training data  or data set 
+
+algorithm output -> is called as model ->  if the input (datset) is given then the ouput is called as model 
+
+test - instance -> FEATURES -> MODEL -> PREDICTION 
+
+----------UNSUPERVISIED LEARNING----------
+
+it doesn't have labels it guesses from the clustering (grouping similar objects)
+
+uses 
+SEGEMENTATION: giving a image and finding the  foreground and background
+by giving a video of containing animals roaming in the forest and the UNSUPERVISIED modle can 
+split the video as foreground and background for tracking the animals and SEGEMENTATION 
+
+----------TYPES OF SUPERVISIED LEARNING-----------
+the models in the Supervisied learning can be defined by the labels it have and these labels will decide the 
+algorithms 
+
+1.CLASSIFICATION
+for example we can take the mango as example 
+
+BINARY CLASSIFICATION -> in email we have spam filtering and we filter the email based on only two labels that is spam or 
+not spam , so here we have 2 lables so that we can simply conclude this as BINARY CLASSIFICATION and BI means 2 so only 2 labels.
+
+MULTICLASS CLASSIFICATION -> in a post code there can be only 6 digits and its a combination of 0 to 9 letters and we have totally 9 labels 
+from 0 to 9 so that we have 10 labels and its called as MULTICLASS CLASSIFICATION
+
+2.REGRESSION 
+for example we have  a table contating the details about coulmns like 
+
+day apple  orange  pinapple    total amount 
+1	2	   1	   3	       125
+2	3	   2	   2	       165
+3	1	   3	   1	       144
+4	2	   1	   2	       186
+5	3	   2	   1	       174
+6	1	   3	   3	       134
+7	3	   2	   1	       ??? -> REAL NUMBER
+
+so now we have find the DAY-7 price in the lables so here we dont have the lables and we have only the trining data from day 1 to day 6 
+and now if we have to calculate the DAY-7 price we have the training data and based on that we can get the day-7 price and this method is 
+called as the REGRESSION and the number which we have as the price is called as the REAL NUMBER.
+
+BASICS OF MACHINE LEARNING :
+1.LINEAR ALGEBRA -> medain lines in all dimensions for 2d is a line for 3d is a plane and for nd is a hyperplane . structure = line ,   
+2.PROABABILITY   -> so when we have a  missing data and some of incorrect data this data is called as the uncertainity data and to understand these types of data the probability is used here 
+3.OPTIMIZATION   -> so in ml we may have the n number of median lines to choose the best line the optimization is used here 
+
+--------PROABABILITY--------
+
+1.SAMPLE SPACE -> by tossing a coin we can get either heads or tail so this output is 2 and this is called as the SAMPLE SPACE 
+SAMPLE SPACE = {H,T}
+H & T = outcomes 
+
+2.EVENT SPACE 
+event 1 = {H} 
+event 2 = {T}
+event 3 = {H,T}
+event 4 = {nothing} 
+these all events are called EVENT SPACE 
+
+3.PROABABILITY SPACE -> the chance of getting this outcomes
+for example : { {H=50%} , {T=50%} , {H,T=100%} , {0=0} }
+
+another example for the probability is the dice rolling 
+sample space -> {1,2,3,4,5,6}
+event space -> {combinations}
+no of events -> 2^6 
+
+
+CONDITIONAL PROABABILITY : 
+p(A given B) -- P(A|B)
+if B acts and completed what could be the changes that made in the event A 
+in simple words the change in event B how occurs the changes in  the probability of A 
+
+DICE ROOL : A = {1,2} and B = {2,4,6}
+P(A) = 1/6 and P(B) = 1/2
+
+now P(A|B) = 1/3 
+so if the b gives the output of the even number then the probability of the A is increases 
+so in simple words what is the possibility of A occurs in B 
+
+P(A|B) = P(A n B) / P(B)
+
+example : 
+A = {2,4,6} (3/6) and B = {1,2,3,4} (4/6)
+
+P(A) = 1/2  
+P(B) = 2/3
+
+P(A|B) = P(A n B) / P(B)  => P({2,4}) / P({1,2,3,4}) => (2/6) / (4/6) = 3/4 = 1/2
+
+P(A|B) = 1/2
+
+if the there is no change between the events then the events are called as the Independent events
+P(A|B) = P(A)
+
+BAYES THEOREM :
+
+P(A|B) = P(A n B) / P(B) 
+
+P(B|A) = P(B n A) / P(A)
+
+bayes theroem formula => P(A|B) = [P(B|A) / P(B)] X P(A)
+
+so the bayes theroem is used to simplyfy the conditional probability equation by elemination the 
+equation and its used when it comes to the large problems where is the data is not fully mentioned 
+
+If you're given the joint probability 𝑃(𝐴∩𝐵) directly (like the probability of both A and B happening together), 
+and you also know the marginal probability P(B), you can directly apply the formula to find P(A∣B).
+
+P(A|B) = POSTERIOR conditional probability -> The updated belief about which line (A) is better after evaluating the dataset 𝐵.
+
+P(B|A) / P(B) = likelihood ->  How well the data B supports the idea that the line A is the best fit.
+that mean how the equeated values matching the prior predictied probability lines
+
+P(A) = PRIOR -> Your initial belief about which line (A) is better, before considering the dataset 𝐵.
+
+
+--------- COUNTINIOUS PROABABILITY DISTRIBUTION ---------
+#finite --> values that can countable
+
+so here the values is not countable that mean we don't know about the values 
+for example : 
+sample space : [0,10]
+E -> event  space : {all intervals [a,b]}
+
+probability density function : to give the probability of any event 
+
+it assocates the value for the sample space with the actual value for example 
+from 1 to 10 it puts as 1/10 and after 10 it will put as 0/10 as 
+
+f(x) = 1/10 if 0 <= x <= 10 
+= 0 otherwise 
+
+if im asking a random probability (A , B) of a sample space it will work like 
+
+first it takes the area b/w A and B and the area is the probability 
+and that area is mentioned as the Area Under the Curve 
+
+the area is a like rectange the area = length x breadth that is 
+
+p([A,B]) = (B-A/10)
+
+for (1,3) -> p([1,3]) = (3-1/10) = (2/10) = 1/5
+
+
+---------- GUASSIAN DISTRIBUTION ----------
+for using to quantify the uncertainity and its used in countinous probability and 
+it uses the bell curve, by taking the mean value it forms the bell shape curve.
+
+"The Gaussian distribution, also known as the normal distribution, is one of the most important and commonly used probability distributions
+in statistics and machine learning. It describes how data values are distributed around a mean (average) in a symmetrical, bell-shaped curve."
+
+SO FOR ONLY COUNT FROM SAMPLE SPACE WE USE THE -- PDF -- AND WE FROM -INFINITY TO +INFINITY WE USE -- GUASSIAN DISTRIBUTION -- 
+
+NEXT FUNDAMENTAL THING FOR MACHINE LEANRING 
+
+---------- LINEAR ALGEBRA ----------
+
+in simple word the Linear Algebra is the study about the lines that divides the two sets
+
+vector = is about the numerical represnation of the data that have both magnitude and direction in same time 
+
+vector addition ( to find the diffrence between 2 vectors )
+
+V1 = V2 + V3 
+
+WEIGHT , magnitude and pythores thorem is about the 
+[10,20] = root of 10^2 + 20^2 
+
+SPAN OF VECTOR :
+by taking a vector as representative and multiplying that with other all values and 
+we putting all this in a bag is called span and the the value is V .
+
+
+---------- LINEAR INDEPENDENCE ----------
+
+a set of vectors {v1,v2,v3,.....,vn} in a Ndimension is linearly Independent when 
+if c1 u1 + c2 u2 + c3 u3 + ...... + cn un = 0 
+   c1,c2,c3,cn = 0
+if all c1 is 0 then its linearly Independent
+by taking other than this method to derive the 0 is called 
+linearly dependent 
+
+let u = {u1,u2,u3,...,un} be linearly Independent vectors such that 
+
+span({u1,u2,u3}) = r^d 
+then span(u) = r^d 
+
+then u is called the basis of r^d 
+
+to show a set of vectors as basis we have to prove that 
+that vectors as linearly Independent or the vectors are span(u) = r^d 
+
+
+
+

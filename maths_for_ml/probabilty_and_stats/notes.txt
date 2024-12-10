@@ -256,5 +256,5 @@ BAYES THEOREM :
 Bayes' Theorem helps us update what we believe about something based on new information. It's a way to find out the likelihood 
 of an event happening, given that another event has already occurred.
 
-P(A∣B)= P(B∣A)⋅P(A) / P(B)
+P(A∣B)= P(B∣A)⋅ P(A) / P(B)
 ​
